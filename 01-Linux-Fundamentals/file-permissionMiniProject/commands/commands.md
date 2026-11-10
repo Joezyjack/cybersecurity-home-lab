@@ -327,6 +327,26 @@ Apply the permission to the resulting filename:
 
 sudo chmod 640 IT/technical-notes.txt
 
+Assign users to departmental groups
+
+sudo usermod -aG administration adminstaff
+sudo usermod -aG itdepartment itstaff
+sudo usermod -aG generalstaff generalstaff
+
+Explanation:
+
+* usermod modifies an existing account.
+* -a appends a supplementary group without removing existing supplementary groups.
+* -G specifies supplementary groups.
+
+Verify the assignments:
+
+id adminstaff
+id itstaff
+id generalstaff
+
+The output should show the appropriate departmental group for each account.
+
 11. Conclusion
 
 The commands documented in this file demonstrate the practical use of Linux user administration, group management, ownership configuration and access-control permissions.
