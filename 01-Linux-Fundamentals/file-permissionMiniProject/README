@@ -1,1 +1,135 @@
+Secure Office File Management System
 
+Linux File Permissions, Ownership and Access Control
+
+Platform: Kali Linux
+Category: Linux System Administration / Cybersecurity
+Difficulty: Beginner
+Project Type: Practical Security Implementation
+
+1. Project Overview
+
+The Secure Office File Management System is a practical Linux cybersecurity project designed to demonstrate how file permissions, ownership and user groups can be used to protect organizational information.
+
+The project simulates a small company with four departmental directories:
+
+* Administration
+* IT
+* Public
+* Shared
+
+Each department has different access requirements.
+
+The objective is to ensure that users can access only the files and directories required for their responsibilities.
+
+2. Project Objectives
+
+* Create and manage Linux user accounts.
+* Create departmental Linux groups.
+* Assign file and directory ownership.
+* Configure permissions using chmod.
+* Manage ownership using chown.
+* Apply group ownership using chgrp.
+* Implement restricted access to confidential files.
+* Configure shared directory access using SGID.
+* Verify file permissions and ownership.
+* Apply the principle of least privilege.
+
+3. Laboratory Environment
+
+* Operating System: Kali Linux
+* Interface: Linux Terminal
+* User Management: useradd, usermod
+* Group Management: groupadd
+* Permission Management: chmod
+* Ownership Management: chown, chgrp
+* Verification: ls, tree, stat, id
+
+4. Project Directory Structure
+
+Secure-Office/
+├── Administration/
+│   └── employee-records.txt
+├── IT/
+│   ├── backup.sh
+│   └── technical-notes.txt
+├── Public/
+│   └── announcements.txt
+└── Shared/
+    └── company-guidelines.txt
+
+5. Departmental Access Design
+
+Department	User	Group	Access
+Administration	adminstaff	administration	Restricted confidential access
+IT	itstaff	itdepartment	Technical file management
+Public	generalstaff	generalstaff	Public information access
+Shared	root	generalstaff	Shared group access
+
+6. Permission Configuration
+
+Resource	Permission	Purpose
+Administration	700	Restrict directory access
+employee-records.txt	600	Protect confidential records
+IT	750	Restrict access to IT personnel
+backup.sh	750	Controlled script execution
+technical-notes.txt	640	IT group read access
+Public	755	Allow public directory access
+announcements.txt	644	Public read access
+Shared	2770	Group-based shared access
+company-guidelines.txt	660	Owner and group read/write access
+
+7. Security Concepts Demonstrated
+
+Access Control
+
+Restricting access to files and directories based on user identity and permissions.
+
+User and Group Administration
+
+Creating accounts and departmental groups to organize access.
+
+Ownership Management
+
+Assigning appropriate users and groups to departmental resources.
+
+Least Privilege
+
+Providing users with only the permissions required for their responsibilities.
+
+Special Permissions
+
+Using the SGID permission to support group inheritance in shared directories.
+
+8. Project Outcome
+
+The project demonstrates how Linux permissions and ownership can be used to organize departmental resources and protect confidential information.
+
+Actual access-control test results and screenshots are included in the evidence directory.
+
+9. Learning Outcomes
+
+Through this project, I gained practical experience in:
+
+* Linux user administration.
+* Linux group management.
+* File and directory permissions.
+* Ownership configuration.
+* Access-control implementation.
+* Basic security auditing.
+* Troubleshooting Linux permission errors.
+
+10. Security Considerations
+
+All activities were performed in a personal Linux learning environment.
+
+The project uses sample organizational data and practice user accounts.
+
+Permissions should always be selected according to the security requirements of the system.
+
+⸻
+
+Project: Secure Office File Management System
+Portfolio: Cybersecurity Home Lab
+Module: Linux Fundamentals — File Permissions and Ownership
+Status: Practical project completed; supporting evidence documented.
