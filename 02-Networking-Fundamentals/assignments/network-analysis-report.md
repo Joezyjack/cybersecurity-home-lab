@@ -22,8 +22,8 @@ Identify the available network interfaces.
 
 Commands:
 
-ip link show
-ip addr show
+    ip link show
+    ip addr show
 
 Questions:
 
@@ -38,8 +38,8 @@ Investigate the machine’s IP addressing configuration.
 
 Commands:
 
-ip addr show
-ip route
+    ip addr show
+    ip route
 
 Questions:
 
@@ -55,7 +55,7 @@ Identify the default gateway.
 
 Command:
 
-ip route
+    ip route
 
 Questions:
 
@@ -69,8 +69,8 @@ Inspect DNS configuration and resolve a domain name.
 
 Commands:
 
-cat /etc/resolv.conf
-getent hosts google.com
+    cat /etc/resolv.conf
+    getent hosts google.com
 
 Questions:
 
@@ -84,8 +84,8 @@ Test local and external connectivity.
 
 Commands:
 
-ping -c 4 192.168.100.1
-ping -c 4 8.8.8.8
+    ping -c 4 192.168.100.1
+    ping -c 4 8.8.8.8
 
 Questions:
 
@@ -100,9 +100,9 @@ Inspect network sockets.
 
 Commands:
 
-ss -tuln
-ss -tun
-sudo ss -tulpn
+    ss -tuln
+    ss -tun
+    sudo ss -tulpn
 
 Questions:
 
@@ -117,10 +117,10 @@ Perform a localhost scan.
 
 Commands:
 
-nmap --version
-nmap 127.0.0.1
-nmap -sV 127.0.0.1
-nmap -p- 127.0.0.1
+    nmap --version
+    nmap 127.0.0.1
+    nmap -sV 127.0.0.1
+    nmap -p- 127.0.0.1
 
 Questions:
 
