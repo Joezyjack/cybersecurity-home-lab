@@ -27,19 +27,19 @@ In this exercise, I investigated the IPv4 configuration of my Kali Linux machine
 
 Display IP configuration
 
-ip addr show
+    ip addr show
 
 Displays assigned IP addresses and network interface information.
 
 Display routing information
 
-ip route
+    ip route
 
 Displays the routing table, including the default gateway and connected networks.
 
 Display detailed interface information
 
-ip -br addr
+    ip -br addr
 
 Displays network interfaces and their addresses in a simplified format.
 
