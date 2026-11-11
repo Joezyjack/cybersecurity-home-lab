@@ -8,25 +8,25 @@ Platform: Kali Linux
 
 Display hostname
 
-hostname
+    hostname
 
 Displays the computer’s hostname.
 
 Display network interfaces
 
-ip link show
+    ip link show
 
 Lists available network interfaces and their operational states.
 
 Display IP addresses
 
-ip addr show
+    ip addr show
 
 Displays IPv4 and IPv6 addresses assigned to network interfaces.
 
 Display simplified interface information
 
-ip -br addr
+    ip -br addr
 
 Provides a brief overview of network interfaces and their IP addresses.
 
@@ -34,13 +34,13 @@ Provides a brief overview of network interfaces and their IP addresses.
 
 Display routing table
 
-ip route
+    ip route
 
 Displays network routes and the default gateway.
 
 Inspect route to an external destination
 
-ip route get 8.8.8.8
+    ip route get 8.8.8.8
 
 Displays the route Linux selects to reach the destination.
 
@@ -48,13 +48,13 @@ Displays the route Linux selects to reach the destination.
 
 Display DNS configuration
 
-cat /etc/resolv.conf
+    cat /etc/resolv.conf
 
 Displays configured DNS resolver information.
 
 Resolve a domain name
 
-getent hosts google.com
+    getent hosts google.com
 
 Retrieves address information for a hostname through the system’s configured name-service mechanisms.
 
@@ -62,19 +62,19 @@ Retrieves address information for a hostname through the system’s configured n
 
 Test local gateway
 
-ping -c 4 192.168.100.1
+    ping -c 4 192.168.100.1
 
 Sends four ICMP echo requests to the local gateway.
 
 Test external IP connectivity
 
-ping -c 4 8.8.8.8
+    ping -c 4 8.8.8.8
 
 Tests communication with an external IP address.
 
 Test domain resolution
 
-getent hosts google.com
+    getent hosts google.com
 
 Checks whether the system can resolve the domain.
 
@@ -82,19 +82,19 @@ Checks whether the system can resolve the domain.
 
 Display listening sockets
 
-ss -tuln
+    ss -tuln
 
 Displays listening TCP and UDP sockets using numeric addresses and ports.
 
 Display active TCP and UDP connections
 
-ss -tun
+    ss -tun
 
 Displays TCP and UDP socket information.
 
 Display listening sockets with process information
 
-sudo ss -tulpn
+    sudo ss -tulpn
 
 Displays listening sockets and associated process information where available.
 
@@ -102,7 +102,7 @@ Displays listening sockets and associated process information where available.
 
 Search common service definitions
 
-grep -E '^(ssh|http|https|domain|ftp)[[:space:]]' /etc/services
+    grep -E '^(ssh|http|https|domain|ftp)[[:space:]]' /etc/services
 
 Displays selected service names and their commonly assigned ports.
 
@@ -110,31 +110,31 @@ Displays selected service names and their commonly assigned ports.
 
 Verify Nmap installation
 
-nmap --version
+    nmap --version
 
 Displays the installed Nmap version and build information.
 
 Scan localhost
 
-nmap 127.0.0.1
+    nmap 127.0.0.1
 
 Scans the default 1,000 commonly used TCP ports on the local machine.
 
 Detect service versions
 
-nmap -sV 127.0.0.1
+    nmap -sV 127.0.0.1
 
 Attempts to identify services and versions on discovered open ports.
 
 Scan all TCP ports
 
-nmap -p- 127.0.0.1
+    nmap -p- 127.0.0.1
 
 Scans TCP ports 1 through 65535.
 
 Scan a specific TCP port
 
-nmap -p 8000 127.0.0.1
+    nmap -p 8000 127.0.0.1
 
 Checks the state of TCP port 8000 on localhost.
 
@@ -144,19 +144,19 @@ The following commands are for the planned local web-server experiment.
 
 Start a local Python HTTP server
 
-python3 -m http.server 8000 --bind 127.0.0.1
+    python3 -m http.server 8000 --bind 127.0.0.1
 
 Starts a simple HTTP server bound only to the local loopback interface.
 
 Inspect port 8000
 
-sudo ss -tulpn | grep 8000
+    sudo ss -tulpn | grep 8000
 
 Checks whether a process is listening on port 8000.
 
 Scan the local service
 
-nmap -sV -p 8000 127.0.0.1
+    nmap -sV -p 8000 127.0.0.1
 
 Attempts to identify the service running on port 8000.
 
