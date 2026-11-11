@@ -31,7 +31,7 @@ Target type	Localhost
 
 Command:
 
-nmap --version
+    nmap --version
 
 Observed result:
 
@@ -43,7 +43,7 @@ This confirmed that Nmap was installed and available in the Kali Linux terminal.
 
 Command:
 
-nmap 127.0.0.1
+    nmap 127.0.0.1
 
 Observed results
 
@@ -60,7 +60,7 @@ The localhost machine responded to the scan, but none of the 1,000 scanned TCP p
 
 Command:
 
-nmap -sV 127.0.0.1
+    nmap -sV 127.0.0.1
 
 The -sV option instructs Nmap to attempt to identify services and their versions on discovered open ports.
 
@@ -77,7 +77,7 @@ This was consistent with the absence of open ports in the default scan.
 
 Command:
 
-nmap -p- 127.0.0.1
+    nmap -p- 127.0.0.1
 
 The -p- option scans TCP ports from 1 through 65535.
 
