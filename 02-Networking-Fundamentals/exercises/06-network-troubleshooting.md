@@ -30,25 +30,25 @@ I also tested DNS resolution.
 
 Test local gateway connectivity
 
-ping -c 4 192.168.100.1
+    ping -c 4 192.168.100.1
 
 This sends four ICMP echo requests to the default gateway.
 
 Test external IP connectivity
 
-ping -c 4 8.8.8.8
+    ping -c 4 8.8.8.8
 
 This tests communication with an external IP address.
 
 Test DNS resolution
 
-getent hosts google.com
+    getent hosts google.com
 
 This checks whether the system can resolve a domain name.
 
 Inspect routing information
 
-ip route
+    ip route
 
 Displays the routing table and default gateway.
 
@@ -90,7 +90,7 @@ Test 3: DNS Resolution
 
 Command:
 
-getent hosts google.com
+    getent hosts google.com
 
 Observed result:
 
@@ -143,35 +143,35 @@ The following commands are useful for future network investigations.
 
 Inspect network interfaces
 
-ip link show
+    ip link show
 
 Inspect IP addresses
 
-ip addr show
+    ip addr show
 
 Inspect routing information
 
-ip route
+    ip route
 
 Inspect DNS configuration
 
-cat /etc/resolv.conf
+    cat /etc/resolv.conf
 
 Test gateway connectivity
 
-ping -c 4 192.168.100.1
+    ping -c 4 192.168.100.1
 
 Test external connectivity
 
-ping -c 4 8.8.8.8
+    ping -c 4 8.8.8.8
 
 Test domain resolution
 
-getent hosts google.com
+    getent hosts google.com
 
 Inspect network sockets
 
-ss -tuln
+    ss -tuln
 
 9. Troubleshooting Scenarios
 
@@ -201,8 +201,8 @@ Possible causes:
 
 Recommended investigation:
 
-ip route
-ping -c 4 8.8.8.8
+    ip route
+    ping -c 4 8.8.8.8
 
 Scenario 3: DNS Resolution Failure
 
@@ -214,8 +214,8 @@ Possible causes:
 
 Recommended investigation:
 
-cat /etc/resolv.conf
-getent hosts google.com
+    cat /etc/resolv.conf
+    getent hosts google.com
 
 Scenario 4: High Network Latency
 
@@ -228,7 +228,7 @@ Possible causes:
 
 Recommended investigation:
 
-ping -c 10 8.8.8.8
+    ping -c 10 8.8.8.8
 
 Compare the response times and packet loss.
 
