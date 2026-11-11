@@ -8,19 +8,19 @@ Commands Executed
 
 1. Test local gateway
 
-ping -c 4 192.168.100.1
+   ping -c 4 192.168.100.1
 
 Result: 4 packets transmitted, 4 received, 0% packet loss.
 
 2. Test external connectivity
 
-ping -c 4 8.8.8.8
+    ping -c 4 8.8.8.8
 
 Result: 4 packets transmitted, 4 received, 0% packet loss.
 
 3. Test DNS resolution
 
-getent hosts google.com
+    getent hosts google.com
 
 Result: Successfully returned an IPv6 address for google.com.
 
