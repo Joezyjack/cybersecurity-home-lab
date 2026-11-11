@@ -26,19 +26,19 @@ In this exercise, I used Kali Linux terminal commands to inspect the network int
 
 Identify the hostname
 
-hostname
+    hostname
 
 Displays the hostname of the computer.
 
 Display network interfaces
 
-ip link show
+    ip link show
 
 Displays available network interfaces and their operational states.
 
 Display interface addresses
 
-ip addr show
+    ip addr show
 
 Displays IP addresses, MAC addresses and other interface information.
 
@@ -46,21 +46,22 @@ Displays IP addresses, MAC addresses and other interface information.
 
 Three network interfaces were identified during the exercise.
 
-A. Loopback Interface (lo)
+  A. Loopback Interface (lo)
 
 The loopback interface is used for communication within the local computer.
 
 Observed IPv4 address:
 
-127.0.0.1
+  127.0.0.1
 
 The loopback interface allows applications and services to communicate with the same machine without using an external network.
+
 
 B. Ethernet Interface (eth0)
 
 The Ethernet interface represents the wired network connection.
 
-Observed status:
+    Observed status:
 
 NO-CARRIER
 state DOWN
