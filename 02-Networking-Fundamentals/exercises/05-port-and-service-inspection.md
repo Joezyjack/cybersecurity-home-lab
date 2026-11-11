@@ -53,3 +53,118 @@ The findings represent the machine’s observed state during the exercise, not a
 Platform: Kali Linux
 Module: Networking Fundamentals
 Exercise: TCP, UDP and Network Port Inspection
+
+
+Exercise 05: Port and Service Inspection
+
+1. Introduction
+
+Network ports are communication endpoints that allow applications and services to exchange information across a network.
+
+In this exercise, I investigated TCP and UDP sockets, listening services and established connections using Kali Linux.
+
+2. Objectives
+
+* Understand network ports.
+* Differentiate TCP and UDP.
+* Identify listening sockets.
+* Inspect established network connections.
+* Understand common service ports.
+* Recognize potential network exposure.
+
+3. Commands Executed
+
+Display listening sockets
+
+ss -tuln
+
+Display active connections
+
+ss -tun
+
+Display service definitions
+
+grep -E '^(ssh|http|https|domain|ftp)[[:space:]]' /etc/services
+
+Inspect listening sockets with process details
+
+sudo ss -tulpn
+
+4. Observations
+
+The listening socket inspection displayed no listening TCP or UDP entries at the time of testing.
+
+The active connection inspection showed:
+
+* Established TCP connections using remote port 443.
+* A UDP connection involving the local gateway at 192.168.100.1, port 67.
+
+The service definitions file was also inspected to identify commonly assigned ports.
+
+5. Common Network Ports
+
+Port	Protocol	Service
+21	TCP	FTP
+22	TCP	SSH
+23	TCP	Telnet
+25	TCP	SMTP
+53	TCP/UDP	DNS
+80	TCP	HTTP
+443	TCP	HTTPS
+3306	TCP	MySQL
+3389	TCP	Remote Desktop
+
+6. Understanding TCP and UDP
+
+TCP
+
+Transmission Control Protocol is connection-oriented and provides reliable, ordered data delivery.
+
+It is commonly used by web applications, SSH and file transfer services.
+
+UDP
+
+User Datagram Protocol is connectionless and does not guarantee delivery or ordering.
+
+It is commonly used for DNS queries, voice communication and real-time applications.
+
+7. Understanding Port States
+
+State	Explanation
+Open	A service is accepting connections
+Closed	No service is listening on the port
+Filtered	Filtering prevents Nmap from determining the state
+
+8. Findings
+
+The listening socket inspection did not report listening entries during the captured test.
+
+The active connection inspection displayed outgoing TCP connections using remote port 443.
+
+The UDP output showed communication involving the local gateway.
+
+The results demonstrated the difference between active connections and listening services.
+
+9. Security Significance
+
+Listening services can increase the attack surface of a computer.
+
+Administrators should identify unnecessary services, review their configurations and restrict access where appropriate.
+
+10. Learning Outcomes
+
+* Learned to inspect TCP and UDP sockets.
+* Differentiated listening sockets from established connections.
+* Identified common service ports.
+* Understood basic network exposure.
+* Learned the security importance of service inspection.
+
+11. Conclusion
+
+The exercise provided practical experience in inspecting network sockets and understanding network ports and services.
+
+The results describe the network state observed during the laboratory session.
+
+Platform: Kali Linux
+Module: Networking Fundamentals
+Exercise: Port and Service Inspection
