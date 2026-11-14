@@ -1,1 +1,54 @@
+EXERCISE 03: TCP PORT SCANNING
 
+Target: 127.0.0.1
+Tool: Nmap 7.99
+
+PART 1: INITIAL SCAN
+
+Command:
+nmap 127.0.0.1
+
+Result:
+Host was up.
+1000 TCP ports were closed.
+No open ports were identified.
+
+PART 2: SERVICE ENUMERATION
+
+Command:
+sudo ss -tulnp
+
+Result:
+No listening TCP or UDP sockets were displayed.
+
+PART 3: HTTP SERVER CREATION
+
+Created a test directory:
+~/port-scanning-lab
+
+Created a test webpage:
+index.html
+
+Started Python HTTP server:
+python3 -m http.server 8000 --bind 127.0.0.1
+
+PART 4: PORT SCAN
+
+Command:
+nmap -sV -p 8000 127.0.0.1
+
+Result:
+8000/tcp open http
+SimpleHTTPServer 0.6 (Python 3.14.7)
+
+CONCLUSION:
+
+The initial scan found no open ports among the
+1000 common TCP ports.
+
+After starting a Python HTTP server, Nmap
+identified TCP port 8000 as open and detected
+the HTTP service.
+
+This exercise demonstrated TCP port states,
+listening services and Nmap service detection.
