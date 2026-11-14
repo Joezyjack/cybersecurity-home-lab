@@ -1,1 +1,31 @@
+EXERCISE 02: LAN DISCOVERY
 
+Tool: Netdiscover
+Network: 192.168.100.0/24
+
+OBJECTIVE:
+Identify active devices on the local network using ARP discovery.
+
+RESULTS:
+
+1. IP: 192.168.100.1
+   MAC: 00:90:4a:31:94:b0
+   Vendor: Concur System Technologies
+   Device: Default Gateway/Router
+
+2. IP: 192.168.100.41
+   MAC: ea:09:29:bf:9a:85
+   Vendor: Unknown
+   Device: iPhone
+
+SUMMARY:
+Netdiscover captured 3 ARP request/reply packets
+and identified 2 unique hosts.
+
+COMPARISON:
+Nmap discovered 3 hosts, including Kali Linux.
+Netdiscover identified 2 other devices.
+
+CONCLUSION:
+Both tools successfully identified the router
+and iPhone on the local network.
