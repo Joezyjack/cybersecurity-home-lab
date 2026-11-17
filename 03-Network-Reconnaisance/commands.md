@@ -1,9 +1,9 @@
 
 # Network Interface Discovery
-hostname
-ip link show
-ip addr show
-ip -br addr
+  hostname
+  ip link show
+  ip addr show
+  ip -br addr
 
 # Routing
 ip route
