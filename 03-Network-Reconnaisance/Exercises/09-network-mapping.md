@@ -37,10 +37,10 @@ sudo netdiscover -r <AUTHORIZED_SUBNET_CIDR>
 
 | Device | IP Address | MAC Address | Role |
 |---|---|---|---|
-| Kali Linux | [Insert] | [Insert] | Security testing |
-| Router | [Insert] | [Insert] | Gateway |
-| iPhone | [Insert] | [Insert] | Mobile device |
-| Other | [Insert] | [Insert] | [Insert] |
+| Kali Linux | [192.168.100.2] | [00:90:4a:31:gy] | Security testing |
+| Router | [192.168.100.1] | [00:90:4a:31:61] | 192.168.100.1 |
+| iPhone | [192.168.100.35] | [00:90:4a:31:xx] | Mobile device |
+| Other | [192.168.100.40] | [00:90:4a:31:xy] | [smartwitch] |
 
 ## Step 5: Draw the Network
 
