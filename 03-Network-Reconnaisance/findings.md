@@ -21,10 +21,10 @@ nmap -sn <AUTHORIZED_SUBNET_CIDR>
 
 Results:
 
-- Total hosts discovered: [Insert result]
-- Active hosts: [Insert result]
-- Network gateway: [Insert result]
-- Other identified devices: [Insert result]
+- Total hosts discovered: 4
+- Active hosts: 3
+- Network gateway: 182.168.100.1
+- Other identified devices: Nil
 
 Observation:
 
@@ -44,35 +44,37 @@ Results:
 
 | IP Address | MAC Address | Identified Device | Observation |
 |---|---|---|---|
-| [IP] | [MAC] | [Device] | [Observation] |
-| [IP] | [MAC] | [Device] | [Observation] |
+| [192.168.100.1] | [xx:xx:xx:xx] | [Router] | [Up] |
+| [192.168.100.20] | [xx:xx:xx:xx:xx] | [iphone] | [Up] |
 
 ## 3. TCP Port Scanning Findings
 
-Target IP: [Insert target]
+Target IP: [192.168.100.0/24]
 
 Command:
 
 ```bash
-nmap -sT -p 1-1000 <AUTHORIZED_TARGET_IP>
+nmap -sT -p 1-1000 <192.168.100.0/24>
 ```
 
 Results:
 
 | Port | State | Service |
 |---|---|---|
-| [Port] | [State] | [Service] |
+| [1-1000] | [closed] | [Nil] |
 
 Observation:
 
 [Describe the open, closed, or filtered ports.]
+
+After running python3 to run a window server 8000, the port 8000 became open
 
 ## 4. TCP SYN Scan Findings
 
 Command:
 
 ```bash
-sudo nmap -sS -p 1-1000 <AUTHORIZED_TARGET_IP>
+sudo nmap -sS -p 1-1000 <192.168.100.0/24>
 ```
 
 Observation:
