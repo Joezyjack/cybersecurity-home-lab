@@ -46,9 +46,33 @@ nmap -sC -sV -p <OBSERVED_OPEN_PORTS> <AUTHORIZED_TARGET_IP>
 ## Questions
 
 1. What is NSE?
+NSE (Nmap Scripting Engine) is a feature of Nmap that uses scripts to automate network discovery, service analysis, security checks, and information gathering.
+It helps Nmap perform tasks beyond basic port scanning.
+
 2. What does `-sC` do?
+The -sC option runs Nmap's default script set (equivalent to --script=default).
+These scripts can help gather additional information about discovered services, such as service details and configurations.
+Example:
+nmap -sC TARGET_IP
+
 3. Why should scripts be reviewed before execution?
+Scripts should be reviewed to understand what they do before running them.
+This helps you:
+- Know what network requests they send.
+- Understand what information they collect.
+- Identify potentially intrusive actions.
+- Avoid unexpected changes or disruptions.
+- Ensure the script is appropriate for your authorized testing scope.
+
 4. Why should intrusive scripts be avoided on uncontrolled systems?
+Intrusive scripts may trigger unintended consequences, such as:
+- Disrupting services.
+- Causing system instability.
+- Triggering security alarms.
+- Locking accounts.
+- Modifying data or system behavior.
+- Violating authorization or usage policies.
+You should only run intrusive tests in systems you own or have explicit permission to test.
 
 ## Evidence
 
