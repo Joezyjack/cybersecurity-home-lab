@@ -59,13 +59,44 @@ Example only:
 ## Questions
 
 1. What is network mapping?
+Network mapping is the process of visually or logically representing devices on a network and showing how they are connected or communicate with one another.
+It helps a security analyst understand the network structure, identify devices, and see how the network is organized.
+
 2. Why is a device inventory important?
+  A device inventory is a record of devices connected to or managed within a network.
+
+    It is important because it helps:
+    - Identify authorized and unknown devices.
+    - Keep track of network assets.
+    - Detect rogue or unauthorized devices.
+    - Know which devices need updates.
+    - Improve troubleshooting and security monitoring.
+
 3. What information should a network map contain?
+        A useful network map may contain:
+        Information      |  	Description
+        Device name      |   	Name or hostname of the device
+        IP address	      |    Logical network address
+        MAC address	      |    Hardware/network interface address
+        Device type	      |    Router, PC, phone, server, printer, etc.
+        Connection	      |    How the device connects to the network
+        Network segment    |  	VLAN or subnet where it belongs
+        Services	        |    Important exposed services or ports, where relevant
+
 4. How does network segmentation improve security?
+    It improves security by:
+    - Limiting unauthorized access between segments.
+    - Reducing the spread of malware.
+    - Isolating sensitive systems.
+    - Restricting access to critical devices.
+    - Reducing the impact of a compromised device.
+    For example, separating guest Wi-Fi from office computers prevents guest devices from having unrestricted access to internal systems.
+
 
 ## Evidence
 
-Save your completed network diagram.
+<img width="1003" height="632" alt="image" src="https://github.com/user-attachments/assets/cf8dfc65-5007-4200-a77d-c054c1245861" />
+
 
 ## Status
 
