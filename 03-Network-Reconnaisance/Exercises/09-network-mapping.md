@@ -74,16 +74,17 @@ It helps a security analyst understand the network structure, identify devices, 
 
 3. What information should a network map contain?
         A useful network map may contain:
-        Information      |  	Description
-        Device name      |   	Name or hostname of the device
-        IP address	      |    Logical network address
-        MAC address	      |    Hardware/network interface address
-        Device type	      |    Router, PC, phone, server, printer, etc.
-        Connection	      |    How the device connects to the network
-        Network segment    |  	VLAN or subnet where it belongs
-        Services	        |    Important exposed services or ports, where relevant
+       | Information      |  	Description|
+       |--- | ---- |
+      |  Device name      |   	Name or hostname of the device |
+       | IP address	      |    Logical network address |
+     | MAC address	      |    Hardware/network interface address |
+       | Device type	      |    Router, PC, phone, server, printer, etc. |
+       | Connection	      |    How the device connects to the network |
+       | Network segment    |  	VLAN or subnet where it belongs |
+       | Services	        |    Important exposed services or ports, where relevant |
 
-4. How does network segmentation improve security?
+5. How does network segmentation improve security?
     It improves security by:
     - Limiting unauthorized access between segments.
     - Reducing the spread of malware.
@@ -97,6 +98,9 @@ It helps a security analyst understand the network structure, identify devices, 
 
 <img width="1003" height="632" alt="image" src="https://github.com/user-attachments/assets/cf8dfc65-5007-4200-a77d-c054c1245861" />
 
+<img width="1082" height="720" alt="image" src="https://github.com/user-attachments/assets/35613790-610b-4adf-880a-c22635e9c449" />
+
+<img width="1077" height="712" alt="image" src="https://github.com/user-attachments/assets/47f645ac-b6b2-406a-90d7-7b749842b242" />
 
 ## Status
 
