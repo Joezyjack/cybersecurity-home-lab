@@ -35,14 +35,14 @@ sudo nmap -sU --top-ports 20 <AUTHORIZED_TARGET_IP> -oN udp-scan.txt
 It is a transport-layer protocol used to send data between devices over a network without establishing a connection first
 
 2. How does UDP differ from TCP?
-| TCP	| UDP |
-|---|---|
-|Connection-oriented | Connectionless|
-|Reliable delivery | Delivery is not guaranteed|
-\Acknowledgments are used |	No standard delivery acknowledgments|
-|Packets are sequenced |	No guaranteed packet ordering|
-|More overhead |	Lower overhead, generally faster|
-|Used for HTTPS, SSH, etc.	| Used for DNS, streaming, gaming, etc.|
+   
+TCP	UDP
+Connection-oriented	Connectionless
+Reliable delivery	Delivery is not guaranteed
+Acknowledgments are used	No standard delivery acknowledgments
+Packets are sequenced	No guaranteed packet ordering
+More overhead	Lower overhead, generally faster
+Used for HTTPS, SSH, etc.	Used for DNS, streaming, gaming, etc.
 
 Simple analogy:
 - TCP: Sending a registered parcel with tracking and delivery confirmation.
